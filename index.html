@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Aathu · Rounded Bird</title>
+    <title>Harsha Star · Rounded Bird</title>
     <style>
         * {
             margin: 0;
@@ -64,7 +64,7 @@
             };
             let pipes = [];
             let score = 0;
-            let highScore = localStorage.getItem('flappyAathuHighScore') || 0;
+            let highScore = localStorage.getItem('harshastarHighScore') || 0;
             let playing = false;
             let gameOver = false;
             let readyToPlay = true;
@@ -226,7 +226,7 @@
 
                 if (score > highScore) {
                     highScore = score;
-                    localStorage.setItem('flappyAathuHighScore', highScore);
+                    localStorage.setItem('harshastarHighScore', highScore);
                 }
 
                 loseSound.currentTime = 0;
@@ -302,14 +302,14 @@
                     ctx.textAlign = 'center';
                     ctx.shadowColor = '#000';
                     ctx.shadowBlur = 15;
-                    ctx.fillText('Flappy Aathu', canvas.width/2, canvas.height/2 - 40);
+                    ctx.fillText('Harsha Star', canvas.width/2, canvas.height/2 - 40);
                     ctx.font = '22px Arial';
-                    ctx.fillText('Tap to start', canvas.width/2, canvas.height/2 + 20);
+                    ctx.fillText('Ikkada Nokku', canvas.width/2, canvas.height/2 + 20);
                     ctx.textAlign = 'left';
                     ctx.shadowColor = 'transparent';
                 }
 
-                // Game over screen with "AAthu Restart"
+                // Game over screen with "Malla Modalupettu"
                 if (gameOver) {
                     ctx.fillStyle = 'rgba(0,0,0,0.7)';
                     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -318,11 +318,11 @@
                     ctx.textAlign = 'center';
                     ctx.shadowColor = '#000';
                     ctx.shadowBlur = 15;
-                    ctx.fillText('AAthu Restart', canvas.width/2, canvas.height/2 - 50);
+                    ctx.fillText('Malla Modalupettu', canvas.width/2, canvas.height/2 - 50);
                     ctx.fillStyle = 'white';
                     ctx.font = '28px Arial';
                     ctx.fillText(`Score: ${score}`, canvas.width/2, canvas.height/2 + 10);
-                    ctx.fillText('Tap to play again', canvas.width/2, canvas.height/2 + 60);
+                    ctx.fillText('Ikkada Nokku', canvas.width/2, canvas.height/2 + 60);
                     ctx.textAlign = 'left';
                     ctx.shadowColor = 'transparent';
                 }
@@ -361,4 +361,5 @@
         })();
     </script>
 </body>
+
 </html>
